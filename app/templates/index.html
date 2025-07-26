@@ -1,0 +1,172 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- banner -->
+<section class="banner_w3lspvt" id="home">
+	<div class="csslider infinity" id="slider1">
+		<div id="#box" class="wrapper">
+			<div class="box11">
+				<div class="conn">
+					<div class="b1">
+						<div class="texty">
+							<h6>Oxygen Plant</h6>
+							<h1>KEEP YOUR</h1>
+							<h1>PLANTS HEALTHY</h1>
+							<p>Plants Reduce Stress Levels And Boost Your Mood Making Them Perfect For Your Home And Your Work Space, Too. A Beautiful Plant Is Like Having A Friend Around The House.</p>
+						</div>
+						<a href="#ser">
+							<button class="see">See More</button>
+						</a>
+					</div>
+					<div class="b2">
+						<img src="{{ url_for('static', filename='images/pot.png') }}" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //banner -->
+
+<!-- core values -->
+<section>
+	<div class="box22">
+		<h1> About Us</h1>
+		<div class="container ">
+			<div class="content">
+				<div class="col-lg-6 core-left">
+					<img src="{{ url_for('static', filename='images/ab.gif') }}" class="img-fluid" alt="" />
+				</div>
+				<div class="ab">
+					<h2>Welcome to FarmAI, where innovation meets agriculture</h2>
+					<p>Our team is dedicated to revolutionizing crop health management through cutting-edge services. We employ advanced machine learning technologies to assist you in navigating the entire farming process. Make well-informed decisions by analyzing local demographics, understanding crop-affecting factors, and maintaining crop health for better yields.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //core values -->
+
+<!-- Products & Services -->
+<section class="blog py-5">
+	<div class="container py-md-5" id="ser">
+		<h1> Our Services</h1>
+		<div class="services">
+			<div class="mw">
+				<div class="simg">
+					<img src="{{ url_for('static', filename='images/crop.gif') }}" class="img-fluid" alt="" />
+				</div>
+				<div class="blog-info">
+					<h4>Crop</h4>
+					<p> Suggests the most suitable crops to be grown based on the prevailing environmental and climatic conditions.</p>
+					<div class="button-container">
+						<a href="{{ url_for('crop_recommend') }}">
+							<button class="seee">Click Here</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="mw">
+				<div class="simg">
+					<img src="{{ url_for('static', filename='images/fert.gif') }}" class="img-fluid" alt="" />
+				</div>
+				<div class="blog-info">
+					<h4>Fertilizer</h4>
+					<p>Advises on the ideal fertilizer for a specific soil and recommends a compatible crop for better productivity.</p>
+					<div class="button-container">
+						<a href="{{ url_for('fertilizer_recommendation') }}">
+							<button class="seee">Click Here</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="mw">
+				<div class="simg">
+					<img src="{{ url_for('static', filename='images/dis.gif') }}" class="img-fluid" alt="">
+				</div>
+				<div class="blog-info">
+					<h4>Disease</h4>
+					<p>Uses Weather API to monitor temperature and humidity. Detects crop diseases based on current weather conditions.</p>
+					<div class="button-container">
+						<a href="{{ url_for('disease_check') }}">
+							<button class="seee">Click Here</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //Products & Services -->
+
+<style>
+    /* Add these styles to your CSS */
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    .mw {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    
+    .mw:hover {
+        transform: translateY(-10px);
+    }
+    
+    .blog-info {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    
+    .button-container {
+        margin-top: auto;
+        padding-top: 20px;
+    }
+    
+    .seee {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .seee:hover {
+        background: #45a049;
+    }
+    
+    .simg img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .blog-info h4 {
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .blog-info p {
+        color: #666;
+        margin-bottom: 15px;
+        flex-grow: 1;
+    }
+</style>
+
+</html>
+{% endblock %}
